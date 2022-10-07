@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+header{
+    height: 70px;
+}
+header h1{
+    display:inline-block;
+    padding: 16px 50px; 
+}
+header ul{
+    float: right;
+}
+header ul li {
+    padding: 24px 50px;
+    display:inline-block;
+}
+header ul li a:hover{
+    color: blue;
+    transition: 0.5s;
+    border-bottom: 3px solid ;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 18px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+}
+#check{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: pink;
+    opacity: .9;
+    transition: 0.3s;
+    z-index: 9999;
+}
+.sidebar ul li a{
+    color: white;
+}
+.sidebar ul li{
+    padding: 24px;
+    transition: 0.5s;
+}
+.sidebar ul li:hover{
+    background-color: aqua;
+    padding: 20px;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+.banner{
+    background-color: aqua;
+}
+section{
+    padding: 50px 20px;
+}
+.banner img{
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 5px #fff;
+}
+.banner .container img:hover{
+    background-color: blue;
+}
+.banner h2{
+    padding-top: 20px;
+    color: white;
+}
+.banner p{
+    color: white;
+    padding-top: 10px;
+}
+.banner span{
+    color: white;
+}
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 20px;
+    border-bottom: 4px solid red;
+}
+#about p{
+    color: black;
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+#skills, #contact{
+    background-color: #f1f1f1;
+}
+#skills .bar{
+    height: 30px;
+    background-color: white;
+    border: 1px solid;
+    margin: 5px 0 20px 0;
+    border-radius: 20px;
+}
+.bar .nilai{
+    height: 30px;
+    background-color: salmon;
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    border-radius: 20px 0px 0px 20px;
+}
+.html{
+    width: 80%;
+}
+.css{
+    width: 70%;
+}
+.js{
+    width: 5%;
+}
+.colom{
+    width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+    float: left;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.colom img{
+    width: 100%;
+}
+.colom a:hover img{
+    transform: scale(1.2);
+}
+.colom1{
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 50px 10px;
+}
+.colom1 h4{
+    padding-bottom: 10px;
+    border-bottom: 2px solid;
+    margin-bottom: 15px;
+}
+html{
+    scroll-behavior: smooth;
+}
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block;
+    }
+    header ul{
+        display: none;
+    }
+    .colom{
+        width: 50%;
+    }
+    .colom1{
+        width: 100%;
+    }
+}
+footer{
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+}
+footer small{
+    color: white;
+}
